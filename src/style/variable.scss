@@ -1,0 +1,49 @@
+body{
+    background-image: url("./Watercolour\ Wallpaper.jfif");
+    font-family: bree,sans-serif;
+font-weight: 400;
+font-style: normal;
+
+}
+
+.barra{
+    background: #BDE3F2;
+    border-radius: 7px;
+    opacity: 95%;
+    
+};
+.tamano-img{
+    height: 100px;
+}
+.cont{
+    background: #F2DAAC;
+    border-radius: 10px;
+}
+.color-text{
+    color:#103B40;
+    font-size: 30px;
+};
+.tamano-letra{
+    font-size: 50px;
+};
+.sub-letra-t{
+    font-size: 20px;
+    text-align: center;
+    text-decoration:underline;
+}
+
+.botton-color{
+    background: #BDE3F2;
+    border-color: #396E80;
+    border-width: 2.5px;
+}
+.botton-color:hover{
+background: #BDE3F2;
+}
+.tarjeta{
+    background: linear-gradient(#D95F5F,#F2DAAC);
+    opacity: 85%;
+}
+.boder-color{
+border-color: #F2C9DC;
+}

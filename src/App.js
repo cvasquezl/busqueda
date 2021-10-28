@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; //npm i axios
-
+import './style/variable.scss';
 
 
 const URL = process.env.REACT_APP_URI  //variable de entorno  
@@ -103,17 +103,20 @@ const getBusquedas = async () => {
 
 
   return (
-    <div className="container bg-success">   
-
-     <nav className="navbar navbar-dark bg-primary justify-content-center">
-       <a className="navbar-brand text-dark" href="/">Consulta de Geo
+    <div className="container cont">   
+    
+     <nav className="navbar navbar-dark barra justify-content-center">
+      
+        <img className="tamano-img" src="https://www.cloudanalysts.com/wp-content/uploads/2020/06/astro.png"/>
+       <a className="navbar-brand text-dark tamano-letra" href="/">Consulta de Geo
       </a>
+    
     </nav>
 
      <div className="row">
 
        <div className="col-md-4"> 
-         <h1 className="text-primary">Buscar Ciudad</h1>
+         <h1 className="color-text sub-letra-t ">Buscar Ciudad</h1>
          
          <input
              className="form-control mb-2" placeholder="Ciudad" value={buscarC}
@@ -121,11 +124,11 @@ const getBusquedas = async () => {
              onKeyUp={buscandoC} 
           />
           <button 
-              className="btn btn-primary" 
+              className="btn botton-color" 
               onClick={refresh}>REFRESH</button>
         </div>
        <div className="col-md-4"> 
-         <h1 className="text-primary">Buscar IATA</h1>
+         <h1 className="color-text sub-letra-t">Buscar IATA</h1>
          
          <input
              className="form-control mb-2" placeholder="Iata" value={buscarI}
@@ -134,7 +137,7 @@ const getBusquedas = async () => {
           />
         </div>
        <div className="col-md-4"> 
-         <h1 className="text-primary">Buscar Region</h1>
+         <h1 className="color-text sub-letra-t">Buscar Region</h1>
          
          <input
              className="form-control mb-2" placeholder="Region" value={buscarR}
@@ -147,7 +150,7 @@ const getBusquedas = async () => {
      <div className="row mt-4 ">   
          { busquedas.map(item => (
           <div key={item._id}  className="col-md-4">
-            <div className="card p-3 m-2 border-primary bg-secondary bg-transparent">
+            <div className="card p-3 m-2 border-color tarjeta">
                <p>Ciudad: {item.CIUDAD}</p>
                <p>IATA: {item.IATA}</p>  
                <p>Region: {item.REGION}</p>  
