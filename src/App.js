@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; //npm i axios
 import './style/variable.scss';
 
-
 const URL = process.env.REACT_APP_URI  //variable de entorno  
 
 const App = () => {
@@ -38,12 +37,21 @@ function filtro (e){
   }    
 }
 
+function retroceder (e){
+  
+  if (e.key !== 'Backspace'){
+    console.log(e.key);    
+  }else{
+    refresh();
+  }
+}
+
 const getfiltro = async () =>{
   const res = await axios.get(URL+'/'+texto)
   setBusquedas(res.data)
 }
 
-const refresh = () =>{
+function refresh (){
   getBusquedas()
   setBuscarC('')
   setBuscarI('')
@@ -52,6 +60,7 @@ const refresh = () =>{
 
 const buscandoC = (e) => {
     setBusquedas(filtro("c"))
+    console.log(e);
 }
 const buscandoI = (e) => {
     setBusquedas(filtro("i"))
@@ -122,7 +131,7 @@ const getBusquedas = async () => {
          <input
              className="form-control mb-2" placeholder="Ciudad" value={buscarC}
              onChange={(e) => setBuscarC(e.target.value)}
-             onKeyUp={buscandoC} 
+             onKeyUp={buscandoC} onKeyDown={retroceder}
           />
           <button 
               className="btn botton-color" 
@@ -134,7 +143,7 @@ const getBusquedas = async () => {
          <input
              className="form-control mb-2" placeholder="Iata" value={buscarI}
              onChange={(e) => setBuscarI(e.target.value)}
-             onKeyUp={buscandoI} 
+             onKeyUp={buscandoI} onKeyDown={retroceder}
           />
         </div>
        <div className="col-md-4"> 
@@ -143,7 +152,7 @@ const getBusquedas = async () => {
          <input
              className="form-control mb-2" placeholder="Region" value={buscarR}
              onChange={(e) => setBuscarR(e.target.value)}
-             onKeyUp={buscandoR} 
+             onKeyUp={buscandoR} onKeyDown={retroceder}
           />
         </div>
      </div>
