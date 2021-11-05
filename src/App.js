@@ -8,10 +8,10 @@ const URL = process.env.REACT_APP_URI  //variable de entorno
 const App = () => {
  
   const [ busquedas, setBusquedas ] = useState([])
-/*   const [ id, setId ] = useState('')
-  const [ ciudad, setCiudad ] = useState('')
-  const [ iata, setIata ] = useState('')
-  const [ region, setRegion ] = useState('') */
+  // const [ id, setId ] = useState('')
+  // const [ CIUDAD, setCiudad ] = useState('')
+  // const [ IATA, setIata ] = useState('')
+  // const [ REGION, setRegion ] = useState('') 
   const [ buscarC, setBuscarC ] = useState('')
   const [ buscarI, setBuscarI ] = useState('')
   const [ buscarR, setBuscarR ] = useState('')
@@ -65,13 +65,14 @@ const getBusquedas = async () => {
     setBusquedas(res.data) 
 }
 
-// const addLibro = async () => {
-//     let obj = { nombre, edicion } 
-//     const res = await axios.post(URL, obj) 
-//     console.log(res.data)
-//     setNombre('')
-//     setEdicion('')
-// }  
+// const AgregarBusqueda = async () => {
+//   let obj = { CIUDAD,REGION,IATA} 
+//   const res = await axios.post(URL, obj) 
+//   console.log(res.data)
+//   setCiudad('')
+//   setRegion('')
+//   setIata('')
+// }
 
 // const deleteLibro = async (id) => {
 //     const res = await axios.delete(URL+'/'+id)
