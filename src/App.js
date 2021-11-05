@@ -164,6 +164,7 @@ const getBusquedas = async () => {
                <p>Ciudad: {item.CIUDAD}</p>
                <p>IATA: {item.IATA}</p>  
                <p>Region: {item.REGION}</p>  
+               <p>Comuna: {item.COMUNA}</p>  
                {/* <div className="d-flex flex-row-reverse">
                <button 
                  className="btn btn-danger" 
