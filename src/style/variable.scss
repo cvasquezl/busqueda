@@ -1,6 +1,7 @@
 body{
-    background-image: url("./Watercolour\ Wallpaper.jfif");
+    background-image: url("./Fondo\ cometas.jfif");
     font-family: 'Open Sans', sans-serif;
+   
 
 }
 
@@ -16,7 +17,9 @@ body{
 .cont{
     background: #fff;
     border-radius: 10px;
+    background:rgba(255, 255, 255, 0.6)
 }
+
 .color-text{
     color:#103B40;
     font-size: 40px;
@@ -38,6 +41,7 @@ body{
 .botton-color:hover{
 background: #BDE3F2;
 }
+
 .tarjeta{
     background: linear-gradient(#FEF5ED,#E2C2B9);
    /*  opacity: 15%; */
